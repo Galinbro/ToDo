@@ -10,7 +10,7 @@ git:
 
 before_script:
 - cd /usr/share
-- sudo mkdir chromedriver
+- sudo mkdir chromedriver2
 - sudo wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
 - unzip -j chromedriver_linux64.zip 
 
