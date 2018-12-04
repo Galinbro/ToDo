@@ -9,13 +9,10 @@ git:
   quiet: true
 
 before_script:
-- gzip -d httpd-NN.tar.gz
-- tar xvf httpd-NN.tar
-- cd httpd-NN
-- ./configure --prefix=PREFIX
-- make
-- make install
-- PREFIX/bin/apachectl -k start
+- sudo apt-get install apache2
+- sudo ufw app list
+- sudo ufw allow 'Apache Full'
+- sudo systemctl status apache2
 
 - sudo apt-get install mysql-server
 - sudo ufw allow mysql
