@@ -9,6 +9,19 @@ git:
   quiet: true
 
 before_script:
+- gzip -d httpd-NN.tar.gz
+- tar xvf httpd-NN.tar
+- cd httpd-NN
+- ./configure --prefix=PREFIX
+- make
+- make install
+- PREFIX/bin/apachectl -k start
+
+- sudo apt-get install mysql-server
+- sudo ufw allow mysql
+- systemctl start mysql
+- systemctl enable mysql
+
 - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 - sudo dpkg -i google-chrome-stable_current_amd64.deb
 - wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
