@@ -9,10 +9,8 @@ git:
   quiet: true
 
 before_script:
-- cd /usr/share
-- sudo mkdir chromedriver3
-- sudo wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
-- sudo unzip -j chromedriver_linux64.zip 
+- wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
+- unzip chromedriver_linux64.zip 
 
 
 addons:
@@ -25,6 +23,7 @@ addons:
 install: true
 
 script: 
+- ./mvnw clean install
 - mvn clean install -U
 - mvn dependency::tree
 - mvn clean test
