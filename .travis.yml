@@ -9,16 +9,7 @@ git:
   quiet: true
 
 before_script:
-- sudo apt-get install apache2
-- sudo ufw app list
-- sudo ufw allow 'Apache Full'
-- sudo systemctl status apache2
-
-- sudo apt-get install mysql-server
-- sudo ufw allow mysql
-- systemctl start mysql
-- systemctl enable mysql
-
+  
 - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 - sudo dpkg -i google-chrome-stable_current_amd64.deb
 - wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
