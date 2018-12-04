@@ -12,7 +12,7 @@ before_script:
 - cd /usr/share
 - sudo mkdir chromedriver
 - sudo wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
-- unzip chromedriver_linux64.zip 
+- unzip -y chromedriver_linux64.zip 
 
 
 addons:
