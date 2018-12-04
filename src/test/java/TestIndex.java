@@ -21,7 +21,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestIndex {
-    private static final String URL = "http://localhost:8080";
+    private static final String URL = "https://www.google.com";
     private static ChromeDriver driver;
     public TestIndex() {
     }
