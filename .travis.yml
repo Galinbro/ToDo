@@ -29,6 +29,7 @@ addons:
 install: true
 
 script: 
+- mvn clean index.php
 - mvn clean install -U
 - mvn dependency::tree
 - mvn clean test
